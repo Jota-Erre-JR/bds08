@@ -1,11 +1,10 @@
 import React, { useMemo, useState } from 'react';
 import './App.css';
 import Header from './components/header';
-import StoreFilter from './components/filter';
-
+import StoreFilter, { FilterData } from './components/filter';
 import {} from './types/store';
 import { buildFilterParams } from './utils/requests';
-import { FilterData } from './types/filterData';
+import SalesSummary from './components/sales-summary';
 
 function App() {
   const [filterData, setFilterData] = useState<FilterData>();
@@ -18,9 +17,10 @@ function App() {
 
   return (
     <>
+      <Header />
       <div className="main-container">
-        <Header />
         <StoreFilter onSubmitFilter={onFilterChange} />
+        <SalesSummary filterData={filterData} />
       </div>
     </>
   );

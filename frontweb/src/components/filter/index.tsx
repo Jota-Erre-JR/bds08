@@ -6,27 +6,27 @@ import { useEffect, useState } from 'react';
 import { Store } from '../../types/store';
 import { requestBackend } from '../../utils/requests';
 
-export type StoreFilterData = {
+export type FilterData = {
   store: Store | null;
 };
 
 type Props = {
-  onSubmitFilter: (data: StoreFilterData) => void;
+  onSubmitFilter: (data: FilterData) => void;
 };
 
 const StoreFilter = ({ onSubmitFilter }: Props) => {
   const [selectStores, setSelectStores] = useState<Store[]>([]);
 
-  const { handleSubmit, setValue, getValues, control } = useForm<StoreFilterData>();
+  const { handleSubmit, setValue, getValues, control } = useForm<FilterData>();
 
-  const onSubmit = (formData: StoreFilterData) => {
+  const onSubmit = (formData: FilterData) => {
     onSubmitFilter(formData);
   };
 
   const handleChangeStore = (value: Store) => {
     setValue('store', value);
 
-    const obj: StoreFilterData = {
+    const obj: FilterData = {
       store: getValues('store')
     };
 

@@ -1,0 +1,27 @@
+.sales-summary-card {
+  height: 520px;
+  width: 300px;
+  padding: 40px 15px;
+
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sales-summary-card-sum {
+  align-items: left;
+  justify-content: center;
+}
+
+.sales-summary-card-value {
+  color: var(--font-color);
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.sales-summary-card-label {
+  color: var(--secondary-color);
+  font-size: 18px;
+}

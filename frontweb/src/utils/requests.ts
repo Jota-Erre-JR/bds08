@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FilterData } from '../types/filterData';
+import { FilterData } from '../components/filter';
 
 export const baseURL = process.env.REACT_APP_BACKEND_URL ?? 'http://localhost:8080';
 
