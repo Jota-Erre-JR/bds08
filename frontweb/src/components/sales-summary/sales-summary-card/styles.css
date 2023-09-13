@@ -1,16 +1,9 @@
 .sales-summary-card {
-  height: 520px;
-  width: 300px;
+  width: 100%;
   padding: 40px 15px;
-
   display: flex;
   align-items: left;
-  justify-content: center;
   flex-direction: column;
-}
-
-.sales-summary-card-sum {
-  align-items: left;
   justify-content: center;
 }
 
@@ -18,10 +11,21 @@
   color: var(--font-color);
   font-size: 36px;
   margin-top: 20px;
-  margin-bottom: 5px;
 }
 
 .sales-summary-card-label {
   color: var(--secondary-color);
   font-size: 18px;
+}
+
+@media (min-width: 576px) {
+  .sales-summary-card {
+    padding: 40px 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .sales-summary-card {
+    padding: 0;
+  }
 }

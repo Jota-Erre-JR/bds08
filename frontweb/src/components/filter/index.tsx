@@ -2,7 +2,6 @@ import './styles.css';
 import { Controller, useForm } from 'react-hook-form';
 import Select from 'react-select';
 import { useEffect, useState } from 'react';
-
 import { Store } from '../../types/store';
 import { requestBackend } from '../../utils/requests';
 
@@ -43,7 +42,7 @@ const StoreFilter = ({ onSubmitFilter }: Props) => {
     <div className="base-card store-filter-container">
       <form onSubmit={handleSubmit(onSubmit)} className="store-filter-form">
         <div className="store-filter-bottom-container">
-          <div className="store-filter-Store-container">
+          <div className="store-filter-store-container">
             <Controller
               name="store"
               control={control}
